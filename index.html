@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mellow Café</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Mellow Café</h1>
+    </header>
+
+    <main>
+        <img src="images/cafe.jpg" alt="فضای دنج کافه میلو">
+        <section>
+          <h2>به کافه میلو خوش آمدید ☕</h2>
+              <p>لحظه‌ ای کوچک از آرامش، با طعم قهوه   </p>
+        </section>
+    </main>
+<section class="menu-section">
+
+    <h2>منوی کافه میلو ☕</h2>
+    <p class="menu-description">طعم لحظه‌های آرامش‌بخش</p>
+
+    <div class="menu-container">
+
+        <div class="menu-card">
+            <img src="images/espresso.jpg" alt="اسپرسو">
+            <h3>اسپرسو</h3>
+            <p>قهوه‌ای غلیظ و خوش‌عطر</p>
+            <p>3.50 €</p>
+            <button data-name="اسپرسو" data-price="3.50">افزودن به سفارش</button>
+        </div>
+        <div class="menu-card">
+            <img src="images/latte.jpg" alt="لاته">
+            <h3>لاته</h3>
+            <p>ترکیب قهوه و شیر گرم</p>
+            <p>4.50 €</p>
+            <button data-name="لاته" data-price="4.50">
+                افزودن به سفارش
+            </button>
+        </div>
+        <div class="menu-card">
+            <img src="images/cappuccino.jpg" alt="کاپوچینو">
+            <h3>کاپوچینو</h3>
+            <p>قهوه با فوم شیر لطیف</p>
+            <p>4.00 €</p>
+            <button data-name="کاپوچینو" data-price="4.00">
+                افزودن به سفارش
+            </button>
+        </div>
+        <div class="menu-card">
+    <img src="images/croissant.jpg" alt="کروسان">
+    <h3>کروسان</h3>
+    <p>شیرینی تازه و کره‌ای</p>
+    <p>3.00 €</p>
+    <button data-name="کروسان" data-price="3.00">
+        افزودن به سفارش
+    </button>
+</div>
+<section class="cart-section">
+
+    <h2>سبد خرید من 🛒</h2>
+
+    <div id="cart-items">
+        <p>هنوز محصولی انتخاب نکرده‌اید.</p>
+    </div>
+
+    <h3>
+        مبلغ کل: <span id="total-price">0</span> €
+    </h3>
+
+</section>
+    <footer>
+        <p>© 2026 Mellow Café</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
