@@ -33,9 +33,15 @@ cart.forEach(function(item) {
    
     let details = document.createElement("span");
 
+    details.style.display = "inline-flex";
+    details.style.alignItems = "center";
+    details.style.gap = "15px";
+
 let productName = document.createElement("strong");
 productName.textContent = item.name;
 productName.style.fontSize = "19px";
+productName.style.fontWeight = "bold";
+productName.style.fontFamily = "inherit";
 
 let quantity = document.createElement("span");
 quantity.textContent = "تعداد: " + item.quantity;

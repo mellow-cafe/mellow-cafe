@@ -1,16 +1,42 @@
-## Hi there 👋
+# ☕ Mellow Café
 
-<!--
-**mellow-cafe/mellow-cafe** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+A simple and responsive café landing page built with HTML, CSS, and Vanilla JavaScript.
 
-Here are some ideas to get you started:
+## 🌐 Live Demo
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+https://mellow-cafe.github.io/mellow-cafe/
+
+## ✨ Features
+
+- Responsive design for mobile and desktop.
+- Navigation links to different sections.
+- Café menu with four products.
+- Interactive shopping cart.
+- Add products and update quantities.
+- Remove products from the cart.
+- Automatic total price calculation.
+- Order confirmation message.
+- Hover effects and smooth transitions.
+
+## 🛠️ Technologies
+
+- HTML5
+- CSS3
+- JavaScript
+
+## 📁 Project Structure
+
+mellow-cafe/
+├── index.html
+├── css/
+│   └── style.css
+├── js/
+│   └── script.js
+├── images/
+└── README.md
+
+## 👩‍💻 Author
+
+Created as a beginner web development project.
+
+Powered by Code to Inspire.

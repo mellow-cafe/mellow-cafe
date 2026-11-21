@@ -31,7 +31,7 @@ p {
     padding: 20px;
 }
 section {
-    background-color: #ffffff;
+    background-color: #e8e1cd;
     border-radius: 15px;
     padding: 40px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
@@ -95,7 +95,7 @@ section {
 }
 
 .menu-card {
-    background-color: white;
+    background-color: #e8e1cd;
     width: 280px;
     padding: 30px 20px;
     border-radius: 15px;
@@ -176,11 +176,11 @@ footer p {
 }
 /* طراحی سبد خرید */
 .cart-section {
-    background-color: #ffffff;
+    background-color: #e8e1cd;
     border: 2px solid #777b43;
     border-radius: 25px;
-    padding: 35px;
-    margin: 40px 20px;
+    padding: 20px;
+    margin: 25px 10px;
     box-shadow: 0 5px 18px rgba(80, 80, 40, 0.10);
 }
 
@@ -212,7 +212,7 @@ footer p {
 
 /* مبلغ کل */
 .cart-section h3 {
-    background-color: #ffffff;
+    background-color: #e8e1cd;
     border: 2px solid #777b43;
     border-radius: 18px;
     padding: 20px;
@@ -269,4 +269,81 @@ button[data-name]:hover,
 .currency {
     font-size: 12px;
     font-weight: normal;
+}
+.contact-section {
+    background-color: #e8e1cd;
+    border: 1px solid #777b43;
+    border-radius: 18px;
+    width: 280px;
+    padding: 12px;
+    margin: 30px auto;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.contact-section h2 {
+    color: #656b35;
+    font-size: 17px;
+    margin: 0 0 12px;
+}
+
+.contact-button {
+    display: inline-block;
+    background-color: #879477;
+    color: white;
+    text-decoration: none;
+    padding: 9px 25px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #656b35;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 15px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #656b35;
+    background-color: #e8e1cd;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: white;
+    background-color: #777b43;
+}
+
+@media (max-width:600px) {
+    .menu-container {
+        grid-template-columns: 1fr;
+    }
+
+
+.menu-card{
+    width: 100%;
+    box-sizing: border-box;
+}
+ 
+.cart-section {
+    width: 95%;
+    padding: 20px 10px;
+}
+}
+.menu-card img {
+    object-fit: cover;
+    object-position: center 70%;
 }
