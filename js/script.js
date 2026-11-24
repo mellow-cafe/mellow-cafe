@@ -118,3 +118,13 @@ orderButton.addEventListener("click", function() {
     }
 
 });
+const menuToggle = document.getElementById("menu-toggle");
+const navbar = document.getElementById("navbar");
+
+menuToggle.addEventListener("click", function () {
+    if (navbar.style.display === "flex") {
+        navbar.style.display = "none";
+    } else {
+        navbar.style.display = "flex";
+    }
+});

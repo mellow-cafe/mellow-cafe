@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 
@@ -11,116 +12,308 @@
 
 <body>
 
+    <!-- Header -->
     <header>
+
+        <img src="images/mellow-logo.png.webp"
+             alt="لوگوی کافه ملو"
+             class="header-logo">
+
+        <button id="menu-toggle" class="menu-toggle">
+            ☰
+        </button>
+
         <h1>Mellow Café</h1>
+
+        <nav id="navbar">
+            <a href="#home">خانه</a>
+            <a href="#cart">سبد خرید</a>
+            <a href="#menu">منوی کافه</a>
+            <a href="#contact">تماس با ما</a>
+        </nav>
+
     </header>
 
-<nav>
-    <a href="#home">خانه</a>
-    <a href="#menu">منوی کافه</a>
-    <a href="#cart">سبد خرید</a>
-    <a href="#contact">تماس با ما</a>
-</nav>
-
+    <!-- Home Section -->
     <main id="home">
-        <img src="images/cafe.webp" alt="فضای دنج کافه میلو">
-        <section>
-          <h2>به کافه ملو خوش آمدید ☕</h2>
-              <p>لحظه‌ ای کوچک از آرامش، با طعم قهوه   </p>
-        </section>
+
+        <div class="hero-image">
+
+            <img src="images/cafe.jpg.png"
+                 alt="فضای دنج کافه ملو">
+
+            <section class="hero-welcome">
+                <h2>به کافه ملو خوش آمدید</h2>
+                <p>«پناهی کوچک میان شلوغی روزها»</p>
+            </section>
+
+            <a href="#menu" class="hero-contact-button">
+                منوی کافه ملو
+            </a>
+
+        </div>
+
     </main>
 
-<section id="menu"class="menu-section">
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
 
-    <h2>منوی کافه ملو ☕</h2>
-    <p class="menu-description">طعم لحظه‌های آرامش‌ بخش</p>
+        <h2>منوی کافه ملو ☕</h2>
 
-    <div class="menu-container">
+        <p class="menu-description">
+            طعم لحظه‌های آرامش‌بخش
+        </p>
 
-        <div class="menu-card">
-            <img src="images/espresso.webp" alt="اسپرسو">
-            <h3>اسپرسو</h3>
-            <p>قهوه‌ای غلیظ و خوش‌عطر</p>
-           <p dir="ltr">
-    <strong style="font-size: 22px;">300</strong>
-    <span style="font-size: 12px;">AFG</span>
-</p>
-            <button data-name="اسپرسو" data-price="300">افزودن به سفارش</button>
+        <div class="menu-container">
+
+            <!-- Espresso -->
+            <div class="menu-card">
+
+                <img src="images/espresso.webp" alt="اسپرسو">
+
+                <h3>اسپرسو</h3>
+
+                <p>قهوه‌ای غلیظ و خوش‌عطر</p>
+
+                <p dir="ltr">
+                    <strong style="font-size: 22px;">300</strong>
+                    <span style="font-size: 12px;">AFG</span>
+                </p>
+
+                <button data-name="اسپرسو" data-price="300">
+                    افزودن به سفارش
+                </button>
+
+            </div>
+
+            <!-- Latte -->
+            <div class="menu-card">
+
+                <img src="images/latte.jpg" alt="لاته">
+
+                <h3>لاته</h3>
+
+                <p>ترکیب قهوه و شیر گرم</p>
+
+                <p dir="ltr">
+                    <strong style="font-size: 22px;">250</strong>
+                    <span style="font-size: 12px;">AFG</span>
+                </p>
+
+                <button data-name="لاته" data-price="250">
+                    افزودن به سفارش
+                </button>
+
+            </div>
+
+            <!-- Cappuccino -->
+            <div class="menu-card">
+
+                <img src="images/cappuccino.jpg" alt="کاپوچینو">
+
+                <h3>کاپوچینو</h3>
+
+                <p>قهوه با فوم شیر لطیف</p>
+
+                <p dir="ltr">
+                    <strong style="font-size: 22px;">350</strong>
+                    <span style="font-size: 12px;">AFG</span>
+                </p>
+
+                <button data-name="کاپوچینو" data-price="350">
+                    افزودن به سفارش
+                </button>
+
+            </div>
+
+            <!-- Croissant -->
+            <div class="menu-card">
+
+                <img src="images/croissant.jpg" alt="کروسان">
+
+                <h3>کروسان</h3>
+
+                <p>شیرینی تازه و کره‌ای</p>
+
+                <p dir="ltr">
+                    <strong style="font-size: 22px;">200</strong>
+                    <span style="font-size: 12px;">AFG</span>
+                </p>
+
+                <button data-name="کروسان" data-price="200">
+                    افزودن به سفارش
+                </button>
+
+            </div>
+
         </div>
-        <div class="menu-card">
-            <img src="images/latte.jpg" alt="لاته">
-            <h3>لاته</h3>
-            <p>ترکیب قهوه و شیر گرم</p>
-            <p dir="ltr">
-    <strong style="font-size: 22px;">250</strong>
-    <span style="font-size: 12px;">AFG</span>
-</p>
-            <button data-name="لاته" data-price="250">
-                افزودن به سفارش
-            </button>
+
+    </section>
+
+    <!-- Cart Section -->
+    <section id="cart" class="cart-section">
+
+        <h2>سبد خرید من 🛒</h2>
+
+        <div id="cart-items">
+            <p>هنوز محصولی انتخاب نکرده‌اید.</p>
         </div>
-        <div class="menu-card">
-            <img src="images/cappuccino.jpg" alt="کاپوچینو">
-            <h3>کاپوچینو</h3>
-            <p>قهوه با فوم شیر لطیف</p>
-            <p dir="ltr">
-    <strong style="font-size: 22px;">350</strong>
-    <span style="font-size: 12px;">AFG</span>
-</p>
-            <button data-name="کاپوچینو" data-price="350">
-                افزودن به سفارش
-            </button>
+
+        <h3>
+            مبلغ کل:
+            <span id="total-price">0</span>
+            <span class="currency">AFG</span>
+        </h3>
+
+        <button id="order-button">
+            ثبت سفارش
+        </button>
+
+    </section>
+
+    <!-- Contact Section -->
+    <section class="cafe-contact" id="contact">
+
+        <div class="contact-container">
+
+            <div class="contact-info">
+
+                <span class="contact-eyebrow">
+                    WE'D LOVE TO HEAR FROM YOU
+                </span>
+
+                <h2>یک فنجان گفتگو؟</h2>
+
+                <p class="contact-description">
+                    ما همیشه مشتاق شنیدن نظرات و پیشنهادهای شما هستیم.
+                    برای ما پیام بگذارید؛ خوشحال می‌شویم با شما در ارتباط باشیم.
+                </p>
+
+                <div class="contact-details">
+
+                    <div class="contact-detail">
+                        <span class="detail-icon">⌖</span>
+                        <div>
+                            <h4>آدرس کافه</h4>
+                            <p>آدرس کافه شما</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-detail">
+                        <span class="detail-icon">☎</span>
+                        <div>
+                            <h4>شماره تماس</h4>
+                            <p>شماره تماس کافه شما</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-detail">
+                        <span class="detail-icon">◷</span>
+                        <div>
+                            <h4>ساعات کاری</h4>
+                            <p>هر روز از ساعت ۹ تا ۲۳</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="contact-note">
+                    <span>☕</span>
+                    <p>قهوه‌ات را بنوش، ما منتظر شنیدن حرف‌هایت هستیم.</p>
+                </div>
+
+            </div>
+
+            <div class="contact-form-wrapper">
+
+                <div class="form-heading">
+                    <span>YOUR MESSAGE</span>
+                    <h3>برای ما بنویسید</h3>
+                    <p>فرم زیر را تکمیل کنید.</p>
+                </div>
+
+                <form class="cafe-contact-form"
+                      action="mailto:YOUR-EMAIL@example.com"
+                      method="post"
+                      enctype="text/plain">
+
+                    <div class="form-group">
+                        <label for="cafe-name">نام و نام خانوادگی</label>
+                        <input
+                            type="text"
+                            id="cafe-name"
+                            name="نام"
+                            placeholder="نام شما"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cafe-email">
+                            ایمیل <small>(اختیاری)</small>
+                        </label>
+                        <input
+                            type="email"
+                            id="cafe-email"
+                            name="ایمیل"
+                            placeholder="example@email.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cafe-subject">موضوع پیام</label>
+                        <select id="cafe-subject" name="موضوع" required>
+                            <option value="" disabled selected>
+                                موضوع مورد نظر را انتخاب کنید
+                            </option>
+                            <option value="پیشنهاد">پیشنهاد و نظرات</option>
+                            <option value="انتقاد">انتقاد و شکایت</option>
+                            <option value="همکاری">همکاری با کافه</option>
+                            <option value="رزرو">رزرو و هماهنگی</option>
+                            <option value="سایر">سایر موارد</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cafe-message">پیام شما</label>
+                        <textarea
+                            id="cafe-message"
+                            name="پیام"
+                            rows="5"
+                            placeholder="پیام خود را اینجا بنویسید..."
+                            required></textarea>
+                    </div>
+
+                    <button type="submit" class="contact-submit">
+                        <span>ارسال پیام</span>
+                        <span class="submit-arrow">←</span>
+                    </button>
+
+                </form>
+
+            </div>
+
         </div>
-        <div class="menu-card">
-    <img src="images/croissant.jpg" alt="کروسان">
-    <h3>کروسان</h3>
-    <p>شیرینی تازه و کره‌ای</p>
-    <p dir="ltr">
-    <strong style="font-size: 22px;">200</strong>
-    <span style="font-size: 12px;">AFG</span>
-</p>
-    <button data-name="کروسان" data-price="200">
-        افزودن به سفارش
-    </button>
-</div>
-</section>
-<section id="cart"class="cart-section">
 
-    <h2>سبد خرید من 🛒</h2>
+    </section>
 
-    <div id="cart-items">
-        <p>هنوز محصولی انتخاب نکرده‌اید.</p>
-    </div>
-
-    <h3>
-    مبلغ کل:
-    <span id="total-price">0</span>
-    <span class="currency">AFG</span>
-</h3>
-    <button id="order-button">ثبت سفارش</button>
-
-</section>
-<section id="contact" class="contact-section">
-
-    <h2>با ما در ارتباط باشید</h2>
-
-    <a href="tel:0777123000" class="contact-button">
-      0777123333
-    </a>
-
-</section>
+    <!-- Footer -->
     <footer>
+
         <p>
             <a
-            href="https://codetoinspire.academy/"
-            target="_blank">
-        Powered by Code to inspire
-        </a>
+                href="https://codetoinspire.academy/"
+                target="_blank"
+                rel="noopener noreferrer">
+                Powered by Code to Inspire
+            </a>
         </p>
+
         <p>Designed & Developed by Anita Azimi</p>
+
         <p>© 2026 Mellow Café</p>
+
     </footer>
 
+    <!-- JavaScript -->
     <script src="js/script.js"></script>
 
 </body>

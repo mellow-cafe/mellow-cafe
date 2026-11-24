@@ -1,0 +1,513 @@
+/* =========================
+   General Styles
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: #f5f3e9;
+    color: #4b5138;
+    font-family: Arial, sans-serif;
+}
+
+
+/* =========================
+   Header
+========================= */
+
+header {
+    background-color: #879477;
+    color: white;
+    text-align: center;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+
+/* =========================
+   Hamburger Button
+========================= */
+
+.menu-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    padding: 5px;
+
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+/* =========================
+   Hamburger Navigation
+========================= */
+
+#navbar {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 10px;
+    background-color: #ffffff;
+    border: 1px solid #e5e2d8;
+    border-radius: 8px;
+    padding: 10px 15px;
+    min-width: 150px;
+    align-items: stretch;
+    z-index: 1000;
+}
+
+#navbar a {
+    display: block;
+    width: 100%;
+    text-align: right;
+    color: #656b35;
+    background: transparent;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 8px;
+    border: none;
+    border-radius: 0;
+    transition: background-color 0.3s ease;
+}
+
+#navbar a:hover {
+    background-color: #f5f3eb;
+    color: #656b35;
+}
+
+
+/* =========================
+   Hero Banner
+========================= */
+
+main {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.hero-image {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: calc(100vh - 60px);
+}
+
+.hero-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero-contact-button {
+    position: absolute;
+    top: 67%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    background-color: #f2dfb6;
+    color: #403b2e;
+    padding: 13px 39px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    white-space: nowrap;
+    transition: 0.3s ease;
+}
+
+.hero-contact-button:hover {
+    background-color: #777b43;
+    color: white;
+}
+
+
+/* =========================
+   General Sections
+========================= */
+
+section {
+    padding: 40px;
+    border-radius: 15px;
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 18px;
+}
+
+
+/* =========================
+   Menu Section
+========================= */
+
+.menu-section {
+    padding: 25px 20px;
+    text-align: center;
+    background-color: #eeeee4;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+}
+
+.menu-section h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #4b5138;
+    text-align: right;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    padding-bottom: 10px;
+    padding-right: 70px;
+    border-bottom: 2px solid #879477;
+    display: inline-block;
+}
+
+.menu-description {
+    font-size: 18px;
+    font-weight: normal;
+    color: #4b5138;
+    text-align: center;
+    padding-right: 0;
+    margin-top: 0;
+    margin-bottom: 35px;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.menu-card {
+    background-color: #e8e1cd;
+    width: 280px;
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.menu-card h3 {
+    color: #879477;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.menu-card p {
+    margin-bottom: 12px;
+}
+
+.menu-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center 70%;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.menu-card button {
+    background-color: #879477;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.2s ease;
+}
+
+.menu-card button:hover {
+    background-color: #4b5138;
+}
+
+
+/* =========================
+   Cart Section
+========================= */
+
+.cart-section {
+    width: 85%;
+    max-width: 720px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #e8e1cd;
+    border: 2px solid #777b43;
+    border-radius: 25px;
+    box-shadow: 0 5px 18px rgba(80, 80, 40, 0.10);
+    text-align: center;
+}
+
+.cart-section h2 {
+    color: #7e8e6a;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#cart-items p {
+    display: flex;
+    flex-direction: row;
+    direction: rtl;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 70px;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 12px 20px;
+    margin: 10px 0;
+}
+
+#cart-items button {
+    background-color: #879477;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 22px;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#cart-items button:hover {
+    background-color: #656b35;
+}
+
+.cart-section h3 {
+    color: #4b5138;
+    background-color: #e8e1cd;
+    border: 2px solid #777b43;
+    border-radius: 18px;
+    padding: 20px;
+    text-align: center;
+    margin-top: 25px;
+}
+
+#order-button {
+    background-color: #879477;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 32px;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    transition: background-color 0.2s ease;
+}
+
+#order-button:hover {
+    background-color: #656b35;
+}
+
+.currency {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+
+/* =========================
+   Contact Section
+========================= */
+
+.contact-section {
+    background-color: #e8e1cd;
+    border: 1px solid #777b43;
+    border-radius: 18px;
+    width: 280px;
+    padding: 12px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.contact-section h2 {
+    color: #656b35;
+    font-size: 17px;
+    margin: 0 0 12px;
+}
+
+.contact-button {
+    display: inline-block;
+    background-color: #879477;
+    color: white;
+    text-decoration: none;
+    padding: 9px 25px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #656b35;
+}
+
+
+/* =========================
+   Contact Form
+========================= */
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: right;
+    margin-top: 20px;
+}
+
+#contact-form label {
+    display: block;
+    color: #656b35;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#contact-form input,
+#contact-form textarea {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d6d6c2;
+    border-radius: 10px;
+    background-color: #faf9f4;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    border-color: #777b43;
+}
+
+#contact-form button {
+    width: 100%;
+    background-color: #777b43;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 12px;
+    margin-top: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact-form button:hover {
+    background-color: #656b35;
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+footer {
+    width: 100%;
+    background-color: #879477;
+    color: white;
+    text-align: center;
+    padding: 35px 0;
+}
+
+footer p {
+    font-size: 22px;
+    margin: 0;
+}
+
+
+/* =========================
+   Responsive Design
+========================= */
+
+@media (max-width: 1000px) {
+
+    .hero-image {
+        height: 60vh;
+    }
+
+    .hero-image img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .menu-section h2 {
+        padding-right: 20px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .hero-image {
+        height: 55vh;
+    }
+
+    .hero-contact-button {
+        font-size: 13px;
+        padding: 11px 25px;
+    }
+
+    .menu-container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .menu-card {
+        width: 100%;
+    }
+
+    .cart-section {
+        width: 95%;
+        padding: 20px 10px;
+    }
+
+    #cart-items p {
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+
+    .contact-section {
+        width: 90%;
+        max-width: 350px;
+    }
+
+    footer p {
+        font-size: 16px;
+    }
+
+}

@@ -1,20 +1,131 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
-    background-color: #f5f3e9;
-    color: #4b5138;
+    margin: 0;
+    padding: 0;
+    direction: rtl;
     font-family: Arial, sans-serif;
-}header {
+    background-color: #faf9f4;
+    color: #403b2e;
+}
+
+header {
     background-color: #879477;
     color: white;
-    text-align: center;
-    padding: 30px;
-}main {
-    min-height: 40vh;
+    padding: 5px 20px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    text-align: center;
-}section {
+    position: relative;
+flex-direction: row;
+}
+
+
+header h1 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+}
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    padding: 5px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#navbar {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 10px;
+    background-color: white;
+    border: 1px solid #e5e2d8;
+    border-radius: 8px;
+    padding: 10px 15px;
+    min-width: 150px;
+    z-index: 1000;
+
+  
+}
+
+#navbar a {
+    display: block;
+    width: 100%;
+    text-align: right;
+    color: #656b35;
+    background: transparent;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 8px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#navbar a:hover {
+    background-color: #f5f3eb;
+    color: #656b35;
+}
+
+.hero-image {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 56px);
+}
+
+.hero-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Welcome Text on Banner */
+
+.hero-welcome {
+    position: absolute;
+    top: 38%;
+    right: 39%;
+    transform: translate(-50%, -50%);
+    color: #544628;
+    text-align: right;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    z-index: 3;
+}
+
+.hero-welcome h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.hero-welcome p {
+    font-size: 18px;
+     top: 38%;
+    right: 39%;
+    transform: translate(-50%, -50%);
+    color: #544628;
+    
+}
+
+/* =========================
+   General Sections
+========================= */
+
+section {
     padding: 40px;
+    border-radius: 15px;
 }
 
 h2 {
@@ -24,51 +135,20 @@ h2 {
 
 p {
     font-size: 18px;
-}footer {
-    background-color: #879477;
-    color: white;
-    text-align: center;
-    padding: 20px;
 }
-section {
-    background-color: #e8e1cd;
-    border-radius: 15px;
-    padding: 40px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-}section {
-    width: 50%;
-    max-width: 500px;
-}main img {
-    margin-top: 50px;
-    width: 65%;
-    max-width: 900px;
-    height: 450px;
-    object-fit: cover;
-    border-radius: 20px;
-}@media (max-width: 1000px) {
 
-    main {
-        flex-direction: column;
-        padding: 20px;
-    }
 
-    main img {
-        width: 100%;
-        height: 250px;
-    }
+/* =========================
+   Menu Section
+========================= */
 
-    section {
-        width: 100%;
-    }
-
-}.menu-section {
+.menu-section {
     padding: 25px 20px;
     text-align: center;
     background-color: #eeeee4;
     width: 100%;
     max-width: none;
     margin: 0;
-    box-sizing: border-box;
 }
 
 .menu-section h2 {
@@ -80,8 +160,18 @@ section {
     letter-spacing: 1px;
     padding-bottom: 10px;
     padding-right: 70px;
-    border-bottom: 2px solid #879477;
+    border-bottom: 1px solid #879477;
     display: inline-block;
+}
+
+.menu-description {
+    font-size: 18px;
+    font-weight: normal;
+    color: #4b5138;
+    text-align: center;
+    padding-right: 0;
+    margin-top: 0;
+    margin-bottom: 35px;
 }
 
 .menu-container {
@@ -95,11 +185,11 @@ section {
 }
 
 .menu-card {
-    background-color: #e8e1cd;
-    width: 280px;
-    padding: 30px 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    background-color: #d9ddce;
+    width: 350px;
+    padding: 30px 22px;
+    border-radius: 18px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
 }
 
 .menu-card h3 {
@@ -112,6 +202,15 @@ section {
     margin-bottom: 12px;
 }
 
+.menu-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center 70%;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
 .menu-card button {
     background-color: #879477;
     color: white;
@@ -120,156 +219,139 @@ section {
     border-radius: 8px;
     cursor: pointer;
     font-size: 15px;
+    transition: background-color 0.2s ease;
 }
 
 .menu-card button:hover {
     background-color: #4b5138;
-}.menu-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 12px;
-    margin-bottom: 15px;
 }
+
+/* =========================
+   Cart Section
+========================= */
+
+
+
+
+/* =========================
+   Beautiful Cart Section
+========================= */
+
 .cart-section {
     width: 90%;
-    max-width: 700px;
-    margin: 50px auto;
-    padding: 35px;
-    background-color: #eeeee4;
-    border-radius: 20px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-    text-align: center;
-    box-sizing: border-box;
-}
-
-.cart-section h2 {
-    color: #4b5138;
-    margin-bottom: 25px;
-}
-
-.cart-section h3 {
-    color: #4b5138;
-    margin-top: 25px;
-}
-footer {
-    width: 100%;
-    background-color: #879477;
-    color: white;
-    text-align: center;
-    padding: 35px 0;
-    box-sizing: border-box;
-}
-
-footer p {
-    font-size: 22px;
-    margin: 0;
-}
-.menu-description {
-    font-size: 18px;
-    font-weight: normal;
-    color: #4b5138;
-    text-align: center;
-    padding-right: 0;
-    margin-top: 0;
-    margin-bottom: 35px;
-}
-/* طراحی سبد خرید */
-.cart-section {
-    background-color: #e8e1cd;
-    border: 2px solid #777b43;
+    max-width: 800px;
+    margin: 55px auto;
+    padding: 30px;
+    background-color: #d9ddce;
+    border: 1px solid #879477;
     border-radius: 25px;
-    padding: 20px;
-    margin: 25px 10px;
-    box-shadow: 0 5px 18px rgba(80, 80, 40, 0.10);
+    box-shadow: 0 8px 25px rgba(64, 75, 48, 0.12);
+    text-align: center;
 }
 
-/* عنوان سبد خرید */
+/* Cart Title */
+
 .cart-section h2 {
-    color: #7e8e6a;
-    text-align: center;
+    color: #4b5138;
+    font-size: 30px;
     margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #879477;
 }
 
-/* ردیف محصولات */
-#cart-items p {
-    background-color: #ffffff;
-    border: 1px solid #dddddd;
-    border-radius: 18px;
-    padding: 18px;
-    margin: 12px 0;
+/* Cart Items */
+
+#cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
-/* دکمه‌های حذف */
-#cart-items button {
-    background-color: #879477;
-    color: white;
-    border: none;
-    border-radius: 25px;
-    padding: 10px 22px;
-    cursor: pointer;
-}
-
-/* مبلغ کل */
-.cart-section h3 {
-    background-color: #e8e1cd;
-    border: 2px solid #777b43;
-    border-radius: 18px;
-    padding: 20px;
-    text-align: center;
-    margin-top: 25px;
-}
-.cart-section {
-    width: 85%;
-    max-width: 720px;
-    margin: 40px auto;
-    box-sizing: border-box;
-}
 #cart-items p {
     display: flex;
     flex-direction: row;
     direction: rtl;
     align-items: center;
-    justify-content: flex-start;
-    gap: 70px;
-    background: transparent;
-    border: none;
-    box-shadow: none;
-    padding: 12px 20px;
-    margin: 10px 0;
+    justify-content: space-between;
+    gap: 15px;
+
+    background-color: #eef0e8;
+    border: 1px solid #c3cbb6;
+    border-radius: 15px;
+
+    padding: 15px 20px;
+    margin: 0;
 }
 
+/* Product Details */
+
+#cart-items p span {
+    color: #4b5138;
+}
+
+/* Delete Button */
+
 #cart-items button {
-    margin-left: 20px;
+    background-color: #879477;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 9px 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
 }
-#cart-items*{
-    letter-spacing: normal;
-    
+
+#cart-items button:hover {
+    background-color: #4b5138;
 }
+
+/* Total Price */
+
+.cart-section h3 {
+    color: #4b5138;
+    background-color: #eef0e8;
+    border: 1px solid #879477;
+    border-radius: 16px;
+    padding: 20px;
+    margin-top: 25px;
+    font-size: 22px;
+}
+
+/* Order Button */
+
 #order-button {
     background-color: #879477;
     color: white;
     border: none;
-    border-radius: 25px;
-    padding: 12px 32px;
-    font-size: 16px;
+    border-radius: 30px;
+    padding: 14px 40px;
+    font-size: 17px;
+    font-weight: bold;
     cursor: pointer;
-    display: block;
-    margin: 20px auto;
+    margin: 20px auto 5px;
+    transition: 0.3s ease;
 }
+
+#order-button:hover {
+    background-color: #4b5138;
+    transform: translateY(-2px);
+}
+
+
 
 #order-button:hover {
     background-color: #656b35;
 }
-button[data-name]:hover,
-#cart-items button:hover{
-    background-color: #656b35;
-    transition: background-color 0.2s ease;
-}
+
 .currency {
     font-size: 12px;
     font-weight: normal;
 }
+
+/* =========================
+   Contact Section
+========================= */
+
 .contact-section {
     background-color: #e8e1cd;
     border: 1px solid #777b43;
@@ -278,7 +360,6 @@ button[data-name]:hover,
     padding: 12px;
     margin: 30px auto;
     text-align: center;
-    box-sizing: border-box;
 }
 
 .contact-section h2 {
@@ -302,48 +383,938 @@ button[data-name]:hover,
 .contact-button:hover {
     background-color: #656b35;
 }
-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    padding: 15px;
-    flex-wrap: wrap;
+
+
+/* =========================
+   Contact Form
+========================= */
+
+
+/* ===== Cafe Contact Section ===== */
+
+.cafe-contact {
+  direction: rtl;
+  width: 100%;
+  padding: 90px 20px;
+  background: #f7f4ef;
+  box-sizing: border-box;
+  font-family: inherit;
 }
 
-nav a {
-    color: #656b35;
-    background-color: #e8e1cd;
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 10px 20px;
-    border-radius: 20px;
-    transition: color 0.3s ease;
+.cafe-contact *,
+.cafe-contact *::before,
+.cafe-contact *::after {
+  box-sizing: border-box;
 }
 
-nav a:hover {
+.contact-container {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 65px;
+  align-items: center;
+}
+
+/* Information side */
+
+.contact-info {
+  padding: 20px 0;
+}
+
+.contact-eyebrow {
+  display: inline-block;
+  color: #a27c5b;
+  font-size: 11px;
+  letter-spacing: 2px;
+  direction: ltr;
+  margin-bottom: 18px;
+}
+
+.contact-info h2 {
+  color: #44352b;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.7;
+  margin: 0 0 15px;
+}
+
+.contact-description {
+  color: #81766c;
+  font-size: 14px;
+  line-height: 2.3;
+  margin-bottom: 38px;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contact-detail {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+
+.detail-icon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ebe2d8;
+  color: #78583f;
+  border-radius: 50%;
+  font-size: 21px;
+}
+
+.contact-detail h4 {
+  color: #49392e;
+  font-size: 14px;
+  margin: 0 0 6px;
+}
+
+.contact-detail p {
+  color: #887c70;
+  font-size: 13px;
+  margin: 0;
+}
+
+.contact-note {
+  margin-top: 38px;
+  padding: 18px;
+  background: #eee7de;
+  border-right: 3px solid #987452;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-radius: 5px;
+}
+
+.contact-note span {
+  font-size: 23px;
+}
+
+.contact-note p {
+  color: #6d5949;
+  font-size: 12px;
+  line-height: 1.9;
+  margin: 0;
+}
+
+/* Form card */
+
+.contact-form-wrapper {
+  background: #fffefa;
+  padding: 42px;
+  border-radius: 12px;
+  box-shadow: 0 12px 45px rgba(73, 53, 35, 0.06);
+  border: 1px solid #eee7de;
+}
+
+.form-heading {
+  margin-bottom: 28px;
+}
+
+.form-heading > span {
+  color: #a27c5b;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.form-heading h3 {
+  color: #49392e;
+  font-size: 25px;
+  margin: 9px 0;
+}
+
+.form-heading p {
+  color: #9b9085;
+  font-size: 13px;
+  margin: 0;
+}
+
+/* Inputs */
+
+.cafe-contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+}
+
+.cafe-contact-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.cafe-contact-form label {
+  color: #5d4b3e;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.cafe-contact-form label small {
+  color: #aaa096;
+  font-weight: 400;
+}
+
+.cafe-contact-form input,
+.cafe-contact-form select,
+.cafe-contact-form textarea {
+  width: 100%;
+  padding: 14px 16px;
+  background: #f8f5f0;
+  border: 1px solid #eee8df;
+  border-radius: 6px;
+  color: #49392e;
+  font-family: inherit;
+  font-size: 13px;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.cafe-contact-form input,
+.cafe-contact-form select {
+  height: 49px;
+}
+
+.cafe-contact-form textarea {
+  min-height: 125px;
+  resize: vertical;
+  line-height: 2;
+}
+
+.cafe-contact-form input::placeholder,
+.cafe-contact-form textarea::placeholder {
+  color: #b2a79b;
+}
+
+.cafe-contact-form input:focus,
+.cafe-contact-form select:focus,
+.cafe-contact-form textarea:focus {
+  border-color: #a27c5b;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(162, 124, 91, 0.08);
+}
+
+/* Submit button */
+
+.contact-submit {
+  width: 100%;
+  min-height: 52px;
+  margin-top: 5px;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #75563e;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-submit:hover {
+  background: #523b2b;
+}
+
+.submit-arrow {
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.contact-submit:hover .submit-arrow {
+  transform: translateX(-5px);
+}
+
+
+}
+
+/* ===== Cafe Contact Refinement ===== */
+
+/* هماهنگی رنگ پس‌زمینه با کارت‌های سایت */
+.cafe-contact {
+  background: #f3eee7;
+}
+
+/* هم‌تراز شدن دو ستون */
+.contact-container {
+  align-items: center;
+  gap: 65px;
+}
+
+/* کوتاه‌تر شدن کارت فرم */
+.contact-form-wrapper {
+  padding: 28px 38px;
+  background: #eee5da;
+  border: 1px solid #e4d7c8;
+  border-radius: 12px;
+  box-shadow: 0 8px 28px rgba(76, 54, 37, 0.07);
+}
+
+/* کاهش فاصله عنوان فرم */
+.form-heading {
+  margin-bottom: 19px;
+}
+
+.form-heading h3 {
+  margin: 6px 0;
+  color: #49392e;
+}
+
+.form-heading p {
+  color: #827365;
+}
+
+/* کاهش فاصله فیلدها */
+.cafe-contact-form {
+  gap: 13px;
+}
+
+.cafe-contact-form .form-group {
+  gap: 6px;
+}
+
+.cafe-contact-form input,
+.cafe-contact-form select {
+  height: 44px;
+  padding: 10px 14px;
+  background: #faf7f2;
+  border-color: #e5d9ca;
+}
+
+.cafe-contact-form textarea {
+  min-height: 95px;
+  padding: 10px 14px;
+  background: #faf7f2;
+  border-color: #e5d9ca;
+}
+
+/* رنگ دکمه هماهنگ با کارت‌ها */
+.contact-submit {
+  min-height: 46px;
+  background: #806247;
+  border-radius: 6px;
+}
+
+.contact-submit:hover {
+  background: #624832;
+}
+
+/* رنگ آیکون‌ها */
+.detail-icon {
+  background: #e8ded2;
+  color: #806247;
+}
+
+.contact-note {
+  background: #eee5da;
+  border-right-color: #806247;
+}
+
+
+
+/* ===== Final Cafe Contact Colors & Size ===== */
+
+.cafe-contact {
+  background: #eee8df;
+}
+
+.contact-form-wrapper {
+  padding: 22px 32px;
+  background: #e9dfd3;
+  border: 1px solid #ded0bf;
+  box-shadow: 0 6px 22px rgba(72, 51, 35, 0.06);
+}
+
+/* عنوان فرم */
+.form-heading {
+  margin-bottom: 14px;
+}
+
+.form-heading h3 {
+  font-size: 22px;
+  color: #49382c;
+}
+
+.form-heading p {
+  font-size: 12px;
+}
+
+/* فیلدها */
+.cafe-contact-form {
+  gap: 10px;
+}
+
+.cafe-contact-form .form-group {
+  gap: 5px;
+}
+
+.cafe-contact-form label {
+  font-size: 12px;
+}
+
+.cafe-contact-form input,
+.cafe-contact-form select {
+  height: 39px;
+  padding: 8px 12px;
+  font-size: 12px;
+  background: #f7f2eb;
+  border-color: #dfd2c3;
+}
+
+.cafe-contact-form textarea {
+  min-height: 78px;
+  padding: 9px 12px;
+  font-size: 12px;
+  background: #f7f2eb;
+  border-color: #dfd2c3;
+}
+
+/* دکمه */
+.contact-submit {
+  min-height: 41px;
+  padding: 9px 16px;
+  background: #76583f;
+  font-size: 13px;
+}
+
+.contact-submit:hover {
+  background: #59412f;
+}
+
+/* بخش اطلاعات */
+.detail-icon {
+  background: #e1d4c5;
+  color: #76583f;
+}
+
+.contact-note {
+  background: #e6dbce;
+  border-right-color: #967555;
+}
+
+.contact-note p,
+.contact-detail p {
+  color: #78695c;
+}
+
+/* عنوان‌ها */
+.contact-info h2 {
+  color: #49382c;
+}
+
+.contact-description {
+  color: #786b60;
+}
+
+
+
+
+
+/* =========================
+   Footer
+========================= */
+
+footer {
+    width: 100%;
+    background-color: #879477;
     color: white;
-    background-color: #777b43;
+    text-align: center;
+    padding: 35px 0;
 }
 
-@media (max-width:600px) {
-    .menu-container {
-        grid-template-columns: 1fr;
+footer p {
+    font-size: 22px;
+    margin: 0;
+}
+
+
+
+/* Hero Contact Button */
+
+.hero-image {
+    position: relative;
+}
+
+.hero-contact-button {
+    position: absolute;
+    top: 49%;
+    left: 28%;
+    transform: translate(-50%, -50%);
+    background-color: #a08850;
+    color: #403b2e;
+    padding: 8px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+    white-space: nowrap;
+    transition: 0.3s ease;
+}
+
+.hero-contact-button:hover {
+    background-color: #656b35;
+}
+
+.header-logo {
+    width: 105px;
+    height: 50px;
+    object-fit: contain;
+    margin: 0;
+}
+.header-logo {
+    order: 3;
+}
+
+header h1 {
+    order: 2;
+}
+
+.menu-toggle {
+    order: 1;
+}
+
+.cart-section {
+    margin: 20px auto;
+    padding: 18px 25px;
+}
+
+.cart-section h2 {
+    margin-bottom: 15px;
+    font-size: 26px;
+}
+
+#cart-items {
+    gap: 8px;
+}
+
+#cart-items p {
+    padding: 9px 15px;
+}
+
+.cart-section h3 {
+    margin-top: 15px;
+    padding: 12px;
+}
+
+#order-button {
+    margin: 12px auto 5px;
+    padding: 10px 35px;
+}
+
+.contact-section {
+    margin: 20px auto;
+}
+
+/* ===== Smooth Transition: Cart to Contact ===== */
+
+/* حذف حالت تکه‌تکه و فاصله اضافی */
+.cafe-contact {
+  margin-top: 0 !important;
+  border-radius: 0 !important;
+  background: #f5f5ed !important;
+  padding: 55px 20px 75px !important;
+}
+
+/* هماهنگی کارت فرم با رنگ کارت‌های سفارش */
+.contact-form-wrapper {
+  background: #e0e3d5 !important;
+  border: 1px solid #cbd1bd !important;
+  box-shadow: 0 8px 25px rgba(76, 83, 57, 0.07) !important;
+}
+
+/* رنگ فیلدها */
+.cafe-contact-form input,
+.cafe-contact-form select,
+.cafe-contact-form textarea {
+  background: #f5f5ed !important;
+  border-color: #d4d9c8 !important;
+  color: #4c503b !important;
+}
+
+/* دکمه ارسال */
+.contact-submit {
+  background: #899477 !important;
+}
+
+.contact-submit:hover {
+  background: #555d43 !important;
+}
+
+/* هماهنگی رنگ تیترها */
+.contact-info h2,
+.form-heading h3 {
+  color: #4c503b !important;
+}
+
+/* هماهنگی آیکون‌ها */
+.detail-icon {
+  background: #d9dece !important;
+  color: #687451 !important;
+}
+
+/* حذف فاصله احتمالی بین سبد خرید و تماس */
+#contact {
+  scroll-margin-top: 20px;
+}
+
+
+
+/* یکپارچه‌سازی پس‌زمینه سبد خرید و تماس */
+
+.cafe-contact {
+  background: #faf9f4 !important;
+  margin-top: 0 !important;
+  padding-top: 55px !important;
+}
+
+
+/* =================================
+   RESPONSIVE DESIGN - MELLOW CAFE
+   ================================= */
+
+/* ---------- لپ‌تاپ و تبلت ---------- */
+@media screen and (max-width: 1024px) {
+
+    .hero-image {
+        height: 60vh;
     }
 
+    .menu-section h2 {
+        padding-right: 20px;
+    }
 
-.menu-card{
+}
+
+/* ---------- تبلت: دو کارت در هر ردیف ---------- */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+
+    .menu-container {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .menu-card {
+        width: 100%;
+        min-width: 0;
+    }
+
+}
+
+/* ---------- موبایل: یک کارت در هر ردیف ---------- */
+@media screen and (max-width: 600px) {
+
+    header {
+        padding: 8px 12px;
+        min-height: 60px;
+    }
+
+    .header-logo {
+        width: 65px;
+        height: 42px;
+    }
+
+    .menu-toggle {
+        right: 12px;
+        font-size: 25px;
+    }
+
+    header h1 {
+        font-size: 18px;
+        white-space: nowrap;
+        max-width: calc(100% - 145px);
+    }
+
+    .hero-image {
+        height: 55vh;
+    }
+
+    .hero-welcome {
+        right: 50%;
+        width: 90%;
+        transform: translate(50%, -50%);
+        text-align: center;
+    }
+
+    .hero-welcome h2 {
+        font-size: 21px;
+    }
+
+    .hero-welcome p {
+        font-size: 14px;
+    }
+
+    .hero-contact-button {
+        font-size: 14px;
+        padding: 10px 20px;
+        left: 50%;
+        white-space: nowrap;
+    }
+
+    .menu-section {
+        padding: 25px 12px;
+    }
+
+    .menu-section h2 {
+        font-size: 25px;
+        padding-right: 10px;
+    }
+
+    .menu-description {
+        font-size: 15px;
+    }
+
+    .menu-container {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+    }
+
+    .menu-card {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .cart-section {
+        width: 95%;
+        padding: 20px 12px;
+    }
+
+    .cart-section h2 {
+        font-size: 25px;
+    }
+
+    #cart-items p {
+        flex-wrap: wrap;
+        padding: 12px;
+        gap: 12px;
+    }
+
+    .contact-section {
+        width: 90%;
+        max-width: 350px;
+    }
+
+    .cafe-contact {
+        padding: 40px 16px 55px !important;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .contact-info h2 {
+        font-size: 27px;
+    }
+
+    .contact-form-wrapper {
+        padding: 20px 17px;
+    }
+
+    footer p {
+        font-size: 16px;
+    }
+
+}
+
+/* ---------- موبایل‌های خیلی کوچک ---------- */
+@media screen and (max-width: 400px) {
+
+    .header-logo {
+        width: 55px;
+    }
+
+    header h1 {
+        font-size: 16px;
+    }
+
+    .hero-welcome h2 {
+        font-size: 19px;
+    }
+
+    .contact-form-wrapper {
+        padding: 18px 14px;
+    }
+
+}
+/* ===== HERO BANNER RESPONSIVE FIX ===== */
+
+/* تبلت */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+
+    .hero-image {
+        width: 100%;
+        height: 60vh;
+        overflow: hidden;
+    }
+
+    .hero-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .hero-welcome {
+        right: 39%;
+        top: 38%;
+        transform: translate(-50%, -50%);
+    }
+
+    .hero-contact-button {
+        left: 28%;
+        top: 49%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* موبایل */
+@media screen and (max-width: 600px) {
+
+    .hero-image {
+        width: 100%;
+        height: 55vh;
+        overflow: hidden;
+    }
+
+    .hero-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .hero-welcome {
+        top: 38%;
+        right: 50%;
+        width: 90%;
+        transform: translate(50%, -50%);
+        text-align: center;
+    }
+
+    .hero-contact-button {
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        white-space: nowrap;
+    }
+}
+
+/* ===== MELLOW CAFE HERO RESPONSIVE ===== */
+
+/* تنظیمات پایه بنر */
+.hero-image {
+    position: relative;
     width: 100%;
-    box-sizing: border-box;
+    height: calc(100vh - 56px);
+    overflow: hidden;
 }
- 
-.cart-section {
-    width: 95%;
-    padding: 20px 10px;
-}
-}
-.menu-card img {
+
+.hero-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    object-position: center 70%;
+    object-position: center;
 }
+
+/* تبلت */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+
+    .hero-image {
+        height: 60vh;
+    }
+
+    .hero-welcome {
+        top: 38%;
+        right: 39%;
+        width: auto;
+        transform: translate(-50%, -50%);
+        text-align: right;
+    }
+
+    .hero-welcome h2 {
+        font-size: 27px;
+    }
+
+    .hero-welcome p {
+        font-size: 16px;
+    }
+
+    .hero-contact-button {
+        top: 49%;
+        left: 28%;
+        transform: translate(-50%, -50%);
+        font-size: 20px;
+    }
+}
+
+/* موبایل */
+@media screen and (max-width: 600px) {
+
+    .hero-image {
+        height: 55vh;
+        min-height: 300px;
+        max-height: 450px;
+    }
+
+    .hero-image img {
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .hero-welcome {
+        top: 38%;
+        right: 50%;
+        width: 90%;
+        transform: translate(50%, -50%);
+        text-align: center;
+    }
+
+    .hero-welcome h2 {
+        font-size: 21px;
+        margin-bottom: 10px;
+    }
+
+    .hero-welcome p {
+        font-size: 14px;
+    }
+
+    .hero-contact-button {
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 14px;
+        padding: 10px 20px;
+        white-space: nowrap;
+    }
+}
+
+/* موبایل کوچک */
+@media screen and (max-width: 400px) {
+
+    .hero-welcome h2 {
+        font-size: 18px;
+    }
+
+    .hero-welcome p {
+        font-size: 13px;
+    }
+
+    .hero-contact-button {
+        font-size: 13px;
+        padding: 9px 18px;
+    }
+}
+
