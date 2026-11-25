@@ -49,12 +49,12 @@ header h1 {
     flex-direction: column;
     position: absolute;
     top: 100%;
-    right: 10px;
-    background-color: white;
+    right: 3px;
+    background-color: #d9ddce;
     border: 1px solid #e5e2d8;
-    border-radius: 8px;
-    padding: 10px 15px;
-    min-width: 150px;
+    border-radius: 5px;
+    padding: 8px 13px;
+    min-width: 10px;
     z-index: 1000;
 
   
@@ -1318,3 +1318,97 @@ header h1 {
     }
 }
 
+.contact-note {
+    background: #879477;
+}
+
+.contact-note p,
+.contact-note span {
+    color: #ffffff;
+}
+.contact-note p {
+    font-size: 16px;
+    line-height: 2;
+}
+/* نمایش کامل عکس بنر در موبایل */
+
+@media screen and (max-width: 600px) {
+
+    .hero-image {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        max-height: none;
+        overflow: hidden;
+    }
+
+    .hero-image img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        display: block;
+    }
+
+}
+/* اصلاح چیدمان نوشته و دکمه بنر در موبایل */
+@media screen and (max-width: 600px) {
+
+    .hero-welcome {
+        top: 38%;
+        right: 50%;
+        left: auto;
+        width: 90%;
+        transform: translate(50%, -50%);
+        text-align: center;
+    }
+
+    .hero-welcome p {
+        position: static;
+        top: auto;
+        right: auto;
+        left: auto;
+        width: 100%;
+        transform: none;
+        text-align: center;
+        margin: 8px 0 0;
+        font-size: 14px;
+    }
+
+    .hero-contact-button {
+        left: 50%;
+        top: 65%;
+        transform: translate(-50%, -50%);
+    }
+
+}
+/* هماهنگ‌سازی نوشته و دکمه بنر در تبلت و موبایل */
+@media screen and (max-width: 1024px) {
+
+    .hero-welcome {
+        top: 38%;
+        right: 50%;
+        left: auto;
+        width: 90%;
+        transform: translate(50%, -50%);
+        text-align: center;
+    }
+
+    .hero-welcome h2 {
+        text-align: center;
+    }
+
+    .hero-welcome p {
+        position: static;
+        width: 100%;
+        margin: 8px 0 0;
+        transform: none;
+        text-align: center;
+    }
+
+    .hero-contact-button {
+        left: 50%;
+        top: 65%;
+        transform: translate(-50%, -50%);
+    }
+
+}
